@@ -368,3 +368,6 @@ ul{padding:0;list-style:none}
 @media (max-width:900px){.ct-home{margin-top:0}}
 
 .f label .opt{color:var(--muted);font-size:.8rem;margin-left:4px}
+
+/* the "Let's talk" heading is an h2 on the home page (one h1 per page for SEO) */
+.ct-copy h2{margin-top:22px;font-weight:300;font-size:clamp(2.6rem,5.4vw,4.6rem);line-height:1.06;letter-spacing:-.04em}
