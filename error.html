@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | TechDive</title>
+<meta name="description" content="This page could not be found.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#05060a">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="/style.css">
+<style>
+.nf{min-height:100vh;min-height:100svh;display:grid;grid-template-rows:auto 1fr auto;position:relative;isolation:isolate;overflow:hidden}
+.nf-top{padding:30px 24px 0;text-align:center}
+.nf-mid{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px 24px 50px}
+.nf-code{font-weight:600;font-size:clamp(5.5rem,22vw,13rem);line-height:.9;letter-spacing:-.06em;background:linear-gradient(95deg,#FFA040 0%,#FF6A00 55%,#E8500A 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;filter:drop-shadow(0 18px 50px rgba(255,106,0,.35))}
+.nf h1{font-weight:300;font-size:clamp(1.8rem,4.6vw,3rem);letter-spacing:-.03em;margin:18px 0 10px}
+.nf p{color:#c9cddb;max-width:30em;margin:0 0 6px}
+.nf-path{display:none;margin:18px 0 0;padding:8px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:#e4e6ee;font-size:.9rem;max-width:min(92vw,520px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.nf-act{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:34px}
+.nf-foot{padding:0 24px 28px;text-align:center;color:#8d93a6;font-size:.88rem}
+.nf-foot a{color:#c9cddb;text-decoration:underline;text-underline-offset:3px}
+@media (max-width:560px){.nf-act .btn-pill,.nf-act .btn-ghost{flex:1 1 100%}}
+</style>
+</head>
+<body>
+<div class="nf">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="aurora"><i class="o1"></i><i class="o2"></i><i class="o3"></i><i class="o4"></i></div>
+    <div class="grid-bg"></div>
+    <div class="shade"></div>
+  </div>
+
+  <header class="nf-top">
+    <a class="logo" href="/" aria-label="TechDive home"><span class="logo-t">Tech</span><span class="logo-d">Dive</span></a>
+  </header>
+
+  <main class="nf-mid" id="main">
+    <div class="nf-code" aria-hidden="true">404</div>
+    <h1>Something went <span class="accent">off course</span></h1>
+    <p>The page you are looking for does not exist, has moved, or something went wrong on our side.</p>
+    <p class="nf-path" id="nfPath"></p>
+    <div class="nf-act">
+      <a class="btn-pill" href="/"><span>Back to home</span><span class="go-w"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+      <a class="btn-ghost" href="/#contact">Contact us</a>
+    </div>
+  </main>
+
+  <footer class="nf-foot">&copy; <span id="yr">2026</span> TechDive &middot; <a href="/">techdive.app</a></footer>
+</div>
+
+<script>
+(function () {
+  var p = location.pathname, el = document.getElementById("nfPath");
+  if (el && p && p !== "/" && !/\/error\.html$/.test(p)) { el.textContent = location.host + p; el.style.display = "block"; }
+  var y = document.getElementById("yr"); if (y) y.textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
